@@ -28,7 +28,7 @@ django-admin startproject testting_platform
 - 命令 ： python manage.py startapp 应用名
 举例说明 ： 需求：开发一个登陆功能
 创建一个业务模块 python manage.py startapp login_action
-django-admin startproject login_action
+django-admin startapp login_action
 
 
 #### 目录介绍
