@@ -25,10 +25,10 @@ django-admin startproject testting_platform
 ```
 
 #### 创建应用
-- 命令 ： python manage.py startapp 应用名
-举例说明 ： 需求：开发一个登陆功能
-创建一个业务模块 python manage.py startapp login_action
-django-admin startapp login_action
+- 命令 ： python manage.py startapp 应用名  
+举例说明 ： 需求：开发一个登陆功能  
+创建一个业务模块 python manage.py startapp login_action  
+ 
 
 
 #### 目录介绍
@@ -43,10 +43,10 @@ django-admin startapp login_action
 在learning/settings.py中INSTALLED_APPS下添加应用的名称就可以完成安装。
 
 #### 开发服务器
-在开发阶段，为了能够快速预览到开发的效果，
-django提供了一个纯python编写的轻量级web服务器，仅在开发阶段使用。
-- 运行服务器命令 python manage.py runserver ip:端口
-举例说明：python manage.py runserver
+在开发阶段，为了能够快速预览到开发的效果，  
+django提供了一个纯python编写的轻量级web服务器，仅在开发阶段使用。  
+- 运行服务器命令 python manage.py runserver ip:端口  
+举例说明：python manage.py runserver  
 
 #### 模型设计 ORM框架
 O是object，也就类对象的意思，R是relation，翻译成中文是关系，
