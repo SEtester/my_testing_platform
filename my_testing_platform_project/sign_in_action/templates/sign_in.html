@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>测试平台</title>
     <h4>测试平台</h4>
-    <form action="/home/" method="get">
+    <form action="/home/" method="post">
+        {% csrf_token %}
         账号：<input type="text" name="username" id="id_username">
         <br>
         密码：<input type="password" name="password" id="id_password">
@@ -12,6 +13,7 @@
         {{error}}
         <br>
         <input type="submit">
+
     </form>
 
 </head>
