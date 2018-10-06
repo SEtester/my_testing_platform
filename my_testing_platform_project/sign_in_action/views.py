@@ -28,15 +28,18 @@ def home(request):
             print(user)
             if  user != None  :
                 # auth.login(request,user)
-                response =  HttpResponseRedirect('/project_manage/')
-                response.set_cookie('user1',username,3600)
-                return response
+                request.session['user1'] = username
+                return HttpResponseRedirect('/project_manage/')
+                # response =  HttpResponseRedirect('/project_manage/')
+                # response.set_cookie('user1',username,3600)
+                # return response
 
                 # return render(request, template_name='sign_in_action/home.html')
             else:
                 return render(request, template_name='sign_in_action/sign_in.html', context={'error': '用户名或密码错误'})
 
 def project_manage(request):
-    username = request.COOKIES.get('user1','')
+    # username = request.COOKIES.get('user1','')
+    username = request.session.get('user1','')
     return render(request, template_name='sign_in_action/home.html',context={"user": username})
     # return render(request, template_name='sign_in_action/home.html')
